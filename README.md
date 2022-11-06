@@ -1,10 +1,10 @@
 [Synapse-Docker](https://github.com/tommytran732/Synapse-Docker)
 
 ```
-git clone https://codeberg.org/deathrow/synapse-docker/
+git clone https://git.anonymousland.org/anonymousland/synapse-docker/
 ```
 ```
-cd synapse-synapse-docker
+cd synapse-docker
 ```
 ```
 docker build .
