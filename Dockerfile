@@ -29,7 +29,7 @@ RUN apk -U upgrade \
         build-base \
         libffi-dev \
         libjpeg-turbo-dev \
-        libressl-dev \
+        openssl-dev \
         libxslt-dev \
         linux-headers \
         postgresql-dev \
@@ -49,7 +49,7 @@ ARG UID
 ARG GID
 
 RUN apk -U upgrade \
- && apk add --no-cache -t build-deps \
+ && apk add --no-cache -t run-deps \
         libffi \
         libgcc \
         libjpeg-turbo \
