@@ -27,15 +27,15 @@ ARG SYNAPSE_VERSION
 RUN apk -U upgrade \
  && apk add --no-cache -t build-deps \
         build-base \
+        git \
         libffi-dev \
         libjpeg-turbo-dev \
-        openssl-dev \
         libxslt-dev \
         linux-headers \
+        openssl-dev \
         postgresql-dev \
         rustup \
         zlib-dev \
-        git \
  && rustup-init -y && source $HOME/.cargo/env \
  && pip install --upgrade pip \
  && pip install --prefix="/install" --no-warn-script-location \
@@ -50,19 +50,19 @@ ARG GID
 
 RUN apk -U upgrade \
  && apk add --no-cache -t run-deps \
+        curl \
+        git \
+        icu-libs \
         libffi \
         libgcc \
         libjpeg-turbo \
-        libressl \
         libstdc++ \
         libxslt \
         libpq \
-        zlib \
+        openssl-dev \
         tzdata \
         xmlsec \
-        git \
-        curl \
-        icu-libs \
+        zlib \
  && adduser -g ${GID} -u ${UID} --disabled-password --gecos "" synapse \
  && rm -rf /var/cache/apk/*
 
