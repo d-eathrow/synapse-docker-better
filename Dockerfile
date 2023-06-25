@@ -49,7 +49,7 @@ ARG UID
 ARG GID
 
 RUN apk -U upgrade \
- && apk add --no-cache -t run-deps \
+ && apk add --no-cache -t build-deps \
         libffi \
         libgcc \
         libjpeg-turbo \
