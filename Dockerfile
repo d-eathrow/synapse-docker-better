@@ -1,4 +1,4 @@
-ARG SYNAPSE_VERSION=1.77
+ARG SYNAPSE_VERSION=1.84
 ARG HARDENED_MALLOC_VERSION=11
 ARG UID=991
 ARG GID=991
@@ -38,7 +38,7 @@ RUN apk -U upgrade \
  && rustup-init -y && source $HOME/.cargo/env \
  && pip install --upgrade pip \
  && pip install --prefix="/install" --no-warn-script-location \
-   -e "git+https://git.anonymousland.org/anonymousland/synapse-product#egg=matrix-synapse[all]==${SYNAPSE_VERSION}"
+   -e "git+https://mau.dev/maunium/synapse#egg=matrix-synapse[all]==${SYNAPSE_VERSION}"
 
 ### Build Production
 
